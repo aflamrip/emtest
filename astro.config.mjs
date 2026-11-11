@@ -9,7 +9,7 @@ export default defineConfig({
 	adapter: cloudflare(),
 		i18n: {
 		defaultLocale: "ar",
-		locales: ["ar", "en"],
+		locales: ["ar"],
 	},
 	image: {
 		layout: "constrained",
