@@ -1,0 +1,25 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "emtest",
+	"main": "./src/worker.ts",
+	"compatibility_date": "2026-02-24",
+	"compatibility_flags": ["nodejs_compat"],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "demtest","database_id": "a736c4cb-df3c-4a96-a496-26db1eab315e",
+		},
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "static","preview_bucket_name": "static",
+		},
+	],
+	// Sandboxed plugins require Worker Loader, available on Workers paid plans. Uncomment to enable:
+	// "worker_loaders": [{ "binding": "LOADER" }],
+	// General maintenance cron trigger
+	"triggers": {
+		"crons": ["* * * * *"],
+	},
+}
